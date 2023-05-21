@@ -1,5 +1,6 @@
 import React from "react"
 import { NavLink } from "react-router-dom"
+import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 function Navbar() {
     return (
@@ -10,7 +11,7 @@ function Navbar() {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon" />
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
+                    <div className="collapse navbar-collapse  d-flex justify-content-between" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                 <NavLink to="/" className="nav-link active">Home</NavLink>
@@ -23,6 +24,9 @@ function Navbar() {
                             </li>
 
                         </ul>
+                        <NavLink to="/cart">
+                            <AiOutlineShoppingCart />
+                        </NavLink>
                     </div>
                 </div>
             </nav>

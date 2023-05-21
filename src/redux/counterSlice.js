@@ -13,11 +13,14 @@ const counterSlice = createSlice({
         },
         decrement: (state, action) => {
             state.number -= action.payload
+        },
+        changeName: (state, action) => {
+            state.userName = "newname"
         }
     }
 })
 
-export const { increment, decrement } = counterSlice.actions
+export const { increment, decrement, changeName } = counterSlice.actions
 
 // always export reducers from slice
 export default counterSlice.reducer;
